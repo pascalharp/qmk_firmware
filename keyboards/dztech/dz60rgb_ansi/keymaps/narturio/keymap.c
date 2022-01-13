@@ -1,5 +1,4 @@
 #include QMK_KEYBOARD_H
-#include "keymap_german.h"
 
 enum layers {
 	MAIN_LAYER,
@@ -7,7 +6,7 @@ enum layers {
 	FN_LAYER
 };
 
-#define LT_ESC_QUICKL LT(QUICK_LAYER, KC_GESC)
+#define LT_ESC_QUICKL LT(QUICK_LAYER, KC_ESC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MAIN_LAYER] = LAYOUT_60_ansi(
@@ -15,14 +14,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,        KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS,
         LT_ESC_QUICKL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,          KC_ENT,
         KC_LSFT,                KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RSFT,
-        KC_LCTL,       KC_LGUI, KC_LALT,                            KC_SPC,                             KC_RALT, MO(FN_LAYER),   MO(FN_LAYER),   KC_RCTL
+        KC_LCTL,       KC_LGUI, KC_LALT,                            KC_SPC,                           KC_RALT, MO(FN_LAYER), TG(FN_LAYER),   KC_RCTL
     ),
     [QUICK_LAYER] = LAYOUT_60_ansi(
-        KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,    KC_F10,  KC_F11,  KC_F12,  KC_DEL,
-        _______, _______, _______, _______, _______, _______, _______, DE_UDIA, _______, DE_ODIA,  KC_PSCR, KC_SLCK, KC_PAUS, RESET,
-        _______, DE_ADIA, DE_SS,   _______, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_HOME, KC_PGUP,          _______,
-        KC_MPRV,          KC_VOLD, KC_VOLU, KC_MUTE, _______, _______, _______, _______, _______,  KC_END,  KC_PGDN,          KC_MNXT,
-        _______, _______, _______,                            _______,                             _______, _______, _______, _______
+        KC_ESC,  KC_F1,   KC_F2,   KC_F3,    KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,    KC_MUTE, KC_VOLD, KC_VOLU,  KC_DEL,
+        _______, _______, KC_UP,   _______,  _______, _______, _______, _______, _______, _______,  KC_PSCR, KC_SLCK, KC_PAUS, RESET,
+        _______, KC_LEFT, KC_DOWN, KC_RIGHT, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_HOME, KC_PGUP,          _______,
+        KC_MPRV,          _______, _______,  _______, _______, _______, _______, _______, _______,  KC_END,  KC_PGDN,          KC_MNXT,
+        _______, _______, _______,                             _______,                             _______, _______, _______, _______
     ),
     [FN_LAYER] = LAYOUT_60_ansi(
         _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,
