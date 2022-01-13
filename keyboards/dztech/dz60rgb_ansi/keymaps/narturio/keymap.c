@@ -17,10 +17,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL,       KC_LGUI, KC_LALT,                            KC_SPC,                           KC_RALT, MO(FN_LAYER), TG(FN_LAYER),   KC_RCTL
     ),
     [QUICK_LAYER] = LAYOUT_60_ansi(
-        KC_ESC,  KC_F1,   KC_F2,   KC_F3,    KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,    KC_MUTE, KC_VOLD, KC_VOLU,  KC_DEL,
-        _______, _______, KC_UP,   _______,  _______, _______, _______, _______, _______, _______,  KC_PSCR, KC_SLCK, KC_PAUS, RESET,
-        _______, KC_LEFT, KC_DOWN, KC_RIGHT, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_HOME, KC_PGUP,          _______,
-        KC_MPRV,          _______, _______,  _______, _______, _______, _______, _______, _______,  KC_END,  KC_PGDN,          KC_MNXT,
+        KC_ESC,  KC_F1,   KC_F2,   KC_F3,    KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,    KC_F10,  KC_F11,  KC_F12,   KC_DEL,
+        _______, _______, KC_UP,   _______,  _______, _______, _______, KC_PGUP, KC_PGDN, _______,  KC_PSCR, KC_SLCK, KC_PAUS,  KC_INS,
+        _______, KC_LEFT, KC_DOWN, KC_RIGHT, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_HOME, _______,          _______,
+        KC_MPRV,          _______, _______,  _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU,  KC_END,  _______,          KC_MNXT,
         _______, _______, _______,                             _______,                             _______, _______, _______, _______
     ),
     [FN_LAYER] = LAYOUT_60_ansi(
